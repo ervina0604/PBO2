@@ -46,10 +46,12 @@ public class Utama {
         System.out.println("");
 
         //INTERFACE
-        Pengemudi vehicle = new Pengemudi("Ali");
+        Pengemudi vehicle = new Pengemudi("Andi", "T-244", "Kuning");
         vehicle.mengemudi();
         vehicle.membersihkan();
         vehicle.mengelola();
+        System.out.println(" ");
+        vehicle.CekPengemudi();
 
     }
 

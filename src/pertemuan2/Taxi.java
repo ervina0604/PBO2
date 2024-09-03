@@ -19,6 +19,10 @@ public class Taxi extends Mobil {
         super.setTipe("Taxi");
         super.setJenisMesin("Bensin");
     }
+    
+    public void cekTaxi() {
+        System.out.println("Cek dari kelas Taxi");
+    }
     /**
      * @return the nomorTaksi
      */
