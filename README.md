@@ -5,17 +5,16 @@
 ---
 
 ## 📑 Table of Contents
-- [🔨 Constructor](#constructor)
-- [📝 Interface](#interface)
-- [🔑 This](#this)
-- [🧭 Super](#super)
-- [🎯 Casting](#casting)
-- [🔍 Kesimpulan](#kesimpulan)
+- [🔨 Constructor](https://github.com/ervina0604/PBO2/blob/main/Kendaraan.java)
+- [📝 Interface](https://github.com/ervina0604/PBO2/blob/main/Driver.java)
+- [🔑 This](https://github.com/ervina0604/PBO2/blob/main/Pengemudi.java)
+- [🧭 Super](https://github.com/ervina0604/PBO2/blob/main/Taxi.java)
+- [🎯 Casting](https://github.com/ervina0604/PBO2/blob/main/Utama.java)
 
 ---
 
 ## 🔨 Constructor
-**Constructor** adalah method khusus yang digunakan untuk **menginisialisasi objek** saat dibuat. Nama constructor harus sama dengan nama kelas dan **tidak memiliki tipe return**.
+**Constructor** adalah metode khusus untuk menginisialisasi objek saat objek tersebut dibuat. Dalam kelas Kendaraan, terdapat konstruktor tanpa parameter yang mengatur nilai default untuk atribut. Ketika objek Kendaraan dibuat, konstruktor ini secara otomatis dipanggil, mencetak pesan ke konsol dan menetapkan nilai tipe menjadi "Umum" dan jumlah roda menjadi 4.
 
 ### ⚙️ Ciri-Ciri Constructor:
 - Nama method **sama dengan nama class**.
@@ -25,10 +24,12 @@
 #### 📌 Kapan Digunakan:
 Setiap kali objek dibuat menggunakan keyword `new`, constructor akan dipanggil untuk menginisialisasi properti objek tersebut.
 
+
+
 ---
 
 ## 📝 Interface
-**Interface** adalah blueprint yang berisi **deklarasi method tanpa implementasi** dan hanya mendefinisikan **konstanta**. Interface digunakan untuk **multiple inheritance**, memungkinkan class mengimplementasikan beberapa interface.
+**Interface** Driver mendefinisikan satu metode: mengemudi(). Kelas yang mengimplementasikan antarmuka ini harus menyediakan implementasi untuk metode tersebut. Ini menunjukkan bahwa setiap objek yang dianggap sebagai Driver harus memiliki kemampuan untuk mengemudikan kendaraan.
 
 ### 🔍 Ciri-Ciri Interface:
 - Semua method bersifat **abstract** (tanpa implementasi).
@@ -41,7 +42,7 @@ Saat ingin memaksa class lain untuk mengimplementasikan method tertentu tanpa me
 ---
 
 ## 🔑 This
-**This** adalah keyword yang merujuk ke **instance objek saat ini**. Digunakan untuk membedakan antara variabel instance dan parameter yang memiliki nama sama atau untuk memanggil constructor lain dalam class yang sama.
+**This** adalah keyword yang merujuk ke **instance objek saat ini**.Dalam konstruktor Pengemudi, kata kunci this digunakan untuk merujuk pada atribut nama dari objek saat ini. Namun, pada contoh ini, parameter nama tidak digunakan secara langsung. Sebagai gantinya, nilai "Andi" yang ditetapkan ke atribut nama. 
 
 ### 📌 Kapan Digunakan:
 - Untuk membedakan variabel instance dari parameter method yang memiliki nama yang sama.
@@ -50,8 +51,7 @@ Saat ingin memaksa class lain untuk mengimplementasikan method tertentu tanpa me
 ---
 
 ## 🧭 Super
-**Super** adalah keyword yang digunakan untuk **merujuk ke class induk (parent class)**. Digunakan untuk memanggil constructor atau method dari parent class.
-
+**Super** adalah keyword yang digunakan untuk **merujuk ke class induk (parent class)**. Ini digunakan untuk memanggil konstruktor atau metode dari kelas induk. Dalam konstruktor Taxi, super.setTipe("Taxi") dan super.setJenisMesin("Bensin") digunakan untuk memanggil metode dari kelas induk (Mobil), sehingga objek Taxi dapat mewarisi dan menggunakan atribut serta metode tersebut.
 ### 📌 Kapan Digunakan:
 - Ketika ingin mengakses method atau constructor dari parent class yang telah di-override di subclass.
 - Untuk menghindari nama method yang tumpang tindih antara parent dan subclass.
@@ -60,7 +60,7 @@ Saat ingin memaksa class lain untuk mengimplementasikan method tertentu tanpa me
 
 ## 🎯 Casting
 **Casting** adalah proses **mengubah tipe data** suatu objek menjadi tipe data lain. Dalam OOP, casting digunakan untuk mengonversi objek dalam hierarki inheritance.
-
+Casting: Objek taxiKuning yang merupakan instansi dari kelas Taxi di-cast menjadi objek bertipe Mobil dengan (Mobil) taxiKuning. Ini memungkinkan akses ke metode dan atribut dari kelas Mobil.
 ### 📌 Kapan Digunakan:
 - **Upcasting:** Mengonversi subclass ke superclass (otomatis dan aman).
 - **Downcasting:** Mengonversi superclass ke subclass (perlu dicek agar aman dan dilakukan secara eksplisit).
